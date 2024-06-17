@@ -19,16 +19,6 @@ else {
 
 
 
-
-
-
-
-
-
-
-
-
-
 let EdadDelUsuario = prompt ("Ingrese Su Edad")
 
 
@@ -57,13 +47,3 @@ if(CorreoDelUsuario.includes("@gmail.com")){
 }
 
 
-
-
-for ( MejoresJugadores = 1; MejoresJugadores <= 10; 1++ ) {
-
-
-    let Lista = prompt ("Ingrese Los Mejores 10 Jugadores De Futbol");
-
-
-    alert ("El jugador " + MejoresJugadores + "Se agrego a la lista" + Lista);
-}
