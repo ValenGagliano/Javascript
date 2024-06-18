@@ -83,7 +83,7 @@ if ( ingresaZapatillas === "Puma modelo 180") {
 
 const final = prompt ("Te gustaria Agregar Algo Mas ?")
 
-if ( final === "Salir"){
+if ( final == "salir"){
 
 salir = final
 
