@@ -35,7 +35,7 @@ function Usuario(nombre, correo){
 
 const zapatillas = [
 
-   {marca: "Nike", modelo: "AirJodan", precio: 230000,},
+   {marca: "Nike", modelo: "AirJordan", precio: 230000,},
    {marca: "Nike", modelo: "Air Max", precio: 175000,},
    { marca: "Nike", modelo: "Nike Air Zoom", precio: 165000},
    {marca: "Adidas", modelo: "Adidas Campus", precio: 140000},
@@ -83,7 +83,7 @@ const ComprarZapatillas = (Zapatilla) => {
 
    const precio = parseInt(findZapa.precio)
 
-   alert("Precio de la misma " + precio)
+   alert("Muchas gracias, el total de la compra es de  " + precio)
  }else{
    return console.log("Lo siento no se mostro una marca existente")
  }
