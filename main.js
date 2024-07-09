@@ -1,114 +1,77 @@
 
+//function Usuario(nombre, correo){
 
-let salir = salir
-let nombre = prompt("Ingrese su nombre")
+  //  this.nombre = nombre
+  //  this.correo = correo}
+  
+  
+   // let nombre = prompt ("Buenos dias, bienvenido a nuestra pagina. Para empezar nos gustaria crear el nombre de usuario")
+  
+ // while ( nombre == ""){
+  
+   //  alert ("No se registro ningun usuario")
+   // nombre = prompt ('Porfavor intente de nuevo')}
+  
+   // alert ("Muchas gracias " + nombre + " es un gusto tenerte")
+  
+  
+ // let correo = prompt ("Ahora para finalizar necesitaremos tu correo")
+  
+ // while (correo == ""){
+  
+    //  alert ("No se pudo verificar tu correo")
+    // correo = prompt ("porfavor intente de nuevo")}
+  
+   // alert ("Su corre " + correo + " fue registrado con exito")
+  
+  
+  
+  //const persona1 = new Usuario (nombre, correo)
+ // console.log(persona1)
+  
+//MOSTRAR ARRAY ANTES DE LA FUNCION ELEGIR ZAPATILLAS, PARA PODER MOSTRAR 3 TIPOS DE ZAPATILLAS DE
+//DISTINTAS MARCAS Y LUEGO DARLE LA OPCION DE ELEGIRLAS 
 
-if (nombre.length > 1){ {
+const zapatillasNike = [{marca: "Nike", modelo: "AirJodan", precio: 230000,},
+    {marca: "Nike", modelo: "Air Max", precio: 175000,},
+    { marca: "Nike", modelo: "Nike Air Zoom", precio: 165000,},]
+
+const zapatillasAdidas = [{marca: "Adidas", modelo: "Adidas Campus", precio: 140000},
+      {marca: "Adidas", modelo: "Adidas Retro", precio: 165000},
+      {marca: "Adidas", modelo: "YEEZY", precio: 185000,}]
+ 
+      const zapatillasPuma = [{marca: "Puma", modelo: "Caven", precio: 145000},
+    {marca: "Puma", modelo: "Cell Divide", precio: 137000},
+    {marca: "Puma", modelo: "X- Ray 2", precio: 119000 },]
+
+//const resultado4 = zapatillasNike.find((zapatilla) => 
+
+   //zapatilla.modelo === "Air Max")
+
+   //console.log(resultado4)
+
+let eleccionMarca = prompt ("En esta pagina contamos con stock de varias marca. Nike, Adidas y Puma. Para verlas solo escriba el nombre de la marca que quiera mirar")
+
+const marcasNike = []
 
 
-alert ("Bienvenido " + nombre + " a la mejor tienda de zapatillas")
+
+if(eleccionMarca == "Nike" || eleccionMarca == "nike"){
+
+zapatillasNike.forEach((tipos) => {
+
+console.log(tipos.modelo)
+
+marcasNike.push(tipos.modelo)
+
+
+})
+let eleccionCompra = prompt ( "En la seccion de nike contamos con las " + marcasNike + "Cuales desearias llevar ?")
+
+
+
 
 }
-
-    function PedirEdad (){
-
-        let edad = prompt ("Usted debre ingresar su edad")
-    
-    
-    if (edad >= 18) {
-    
-    alert ("Gracias por verificar que su edad es de " + edad + " ."  )
-    
-    } 
-    
-    else if (edad < 18 ) { {
-    
-        alert ( "Ustede debe Ser mayor de edad para continuar.")
-    }}}
-    
-    PedirEdad ();
-    
-    function PedirCorreo (){
-    
-    let CorreoElectronico = prompt (" Para finalizar el registro de usuario le pediremos su correo electronico.")
-    
-    if (CorreoElectronico.includes ("@gmail.com"))
-    
-        alert ("Tu correo " + CorreoElectronico + " fue registrado con exito.")
-    
-    else if (CorreoElectronico.length < 1) {{
-    
-    alert ("Su correo no es valido, intente nuevamente")
-    }}}
-    
-    PedirCorreo ();
-
-
-
-    function elegirZapatillas() {
-        let opciones = prompt("A dia de hoy contamos con 3 zapatillas en stock n\ 1. Adidas Retro n\ 2. Nike AirJordan n\ 3. Puma Clasic 180 ")
-        const precioAdidas = 123000;
-    
-        const iva = (a,b) => a * b
-    
-        const resultado = iva(precioAdidas, 0.21)
-    
-        const precioFinal = (a,b) => a + b
-    
-        const resultadoFinalAdidas = precioFinal(precioAdidas, resultado)
-    
-        if (opciones == 1 || opciones == " Adidas Retro") {
-    
-            alert("Su Precio final es de " + resultadoFinalAdidas + " Muchas Gracias por su compra.")
-    
-        }
-    
-    
-        else if (opciones == 2 || opciones == "Nike AirJordan"){{ 
-            const precioNike = 145000;
-    
-            const iva = (a,b) => a * b
-        
-            const resultado = iva(precioNike, 0.21)
-        
-            const precioFinal = (a,b) => a + b
-        
-            const resultadoFinalNike = precioFinal(precioNike, resultado)
-            
-            
-            alert ("Su precio final es de " + resultadoFinalNike + " Muchas gracias por su compra.")
-
-        }}
-
-
-        else if (opciones == 3 || opciones == "Puma Clasic 180"){
-
-            const precioPuma = 110000;
-    
-            const iva = (a,b) => a * b
-        
-            const resultado = iva(precioPuma, 0.21)
-        
-            const precioFinal = (a,b) => a + b
-        
-            const resultadoFinalPuma = precioFinal(precioPuma, resultado)
-            
-            
-            alert ("Su precio final es de " + resultadoFinalPuma + " Muchas gracias por su compra.")
-
-
-        }}
-    
-    elegirZapatillas ();
-
-} 
-
-
-
-
-
-
-
 
 
 

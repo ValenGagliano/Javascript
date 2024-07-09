@@ -13,7 +13,81 @@
     
     
     
-   
+    function elegirZapatillas() {
+        let opciones = prompt("A dia de hoy contamos con stock en 3 marcas principales de zapatillas. Nike, Adidas y Puma. Elegi escribiendo la marca de zapatilla para ver mas opciones ")
+        const precioAdidas = 123000;
+    
+        const iva = (a,b) => a * b
+    
+        const resultado = iva(precioAdidas, 0.21)
+    
+        const precioFinal = (a,b) => a + b
+    
+        const resultadoFinalAdidas = precioFinal(precioAdidas, resultado)
+    
+        if (opciones == "Nike" || opciones == "nike" || opciones == "NIKE") {
+    
+           for(const zapatilla of zapatillasNike){
+
+            alert(zapatilla.modelo);} }
+
+        let eleccion = prompt ("Cual de los modelos guardados te gustaria llevar ? AirJordan - Air Max - Air Zoom")
+           
+           
+        if(eleccion == "Airjordan" || eleccion == "Airjordan".toUpperCase()){
+
+            
+           function precioIva(){
+                let precio = 230000
+                
+                   let precioFinal= precio* 0.21
+                
+                let resultado = precioFinal
+                        
+                 alert ("Muchas gracias por su compra su total es de " + resultado)}}
+    
+                 
+               
+        }
+        precioIva();
+    
+        //else if (opciones == 2 || opciones == "Nike AirJordan"){{ 
+           // const precioNike = 145000;
+    
+           // const iva = (a,b) => a * b
+        
+          //  const resultado = iva(precioNike, 0.21)
+        
+          //  const precioFinal = (a,b) => a + b
+        
+          //  const resultadoFinalNike = precioFinal(precioNike, resultado)
+            
+            
+          //  alert ("Su precio final es de " + resultadoFinalNike + " Muchas gracias por su compra.")
+
+       // }}
+
+
+       // else if (opciones == 3 || opciones == "Puma Clasic 180"){
+
+           // const precioPuma = 110000;
+    
+            //const iva = (a,b) => a * b
+        
+          //  const resultado = iva(precioPuma, 0.21)
+        
+          //  const precioFinal = (a,b) => a + b
+        
+          //  const resultadoFinalPuma = precioFinal(precioPuma, resultado)
+            
+            
+         //   alert ("Su precio final es de " + resultadoFinalPuma + " Muchas gracias por su compra.")
+
+
+       // }}
+    
+    elegirZapatillas ();
+
     
 </body>
 
