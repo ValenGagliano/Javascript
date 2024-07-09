@@ -1,79 +1,95 @@
 
-//function Usuario(nombre, correo){
+function Usuario(nombre, correo){
 
-  //  this.nombre = nombre
-  //  this.correo = correo}
+    this.nombre = nombre
+    this.correo = correo}
   
   
-   // let nombre = prompt ("Buenos dias, bienvenido a nuestra pagina. Para empezar nos gustaria crear el nombre de usuario")
+    let nombre = prompt ("Buenos dias, bienvenido a nuestra pagina. Para empezar nos gustaria crear el nombre de usuario")
   
- // while ( nombre == ""){
+  while ( nombre == ""){
   
-   //  alert ("No se registro ningun usuario")
-   // nombre = prompt ('Porfavor intente de nuevo')}
+     alert ("No se registro ningun usuario")
+    nombre = prompt ('Porfavor intente de nuevo')}
   
-   // alert ("Muchas gracias " + nombre + " es un gusto tenerte")
-  
-  
- // let correo = prompt ("Ahora para finalizar necesitaremos tu correo")
-  
- // while (correo == ""){
-  
-    //  alert ("No se pudo verificar tu correo")
-    // correo = prompt ("porfavor intente de nuevo")}
-  
-   // alert ("Su corre " + correo + " fue registrado con exito")
+    alert ("Muchas gracias " + nombre + " es un gusto tenerte")
   
   
+  let correo = prompt ("Ahora para finalizar necesitaremos tu correo")
   
-  //const persona1 = new Usuario (nombre, correo)
- // console.log(persona1)
+  while (correo == ""){
   
-//MOSTRAR ARRAY ANTES DE LA FUNCION ELEGIR ZAPATILLAS, PARA PODER MOSTRAR 3 TIPOS DE ZAPATILLAS DE
-//DISTINTAS MARCAS Y LUEGO DARLE LA OPCION DE ELEGIRLAS 
+    alert ("No se pudo verificar tu correo")
+    correo = prompt ("porfavor intente de nuevo")}
+  
+   alert ("Su corre " + correo + " fue registrado con exito")
+  
+  
+  
+  const persona1 = new Usuario (nombre, correo)
+ console.log(persona1)
+  
 
-const zapatillasNike = [{marca: "Nike", modelo: "AirJodan", precio: 230000,},
-    {marca: "Nike", modelo: "Air Max", precio: 175000,},
-    { marca: "Nike", modelo: "Nike Air Zoom", precio: 165000,},]
 
-const zapatillasAdidas = [{marca: "Adidas", modelo: "Adidas Campus", precio: 140000},
-      {marca: "Adidas", modelo: "Adidas Retro", precio: 165000},
-      {marca: "Adidas", modelo: "YEEZY", precio: 185000,}]
- 
-      const zapatillasPuma = [{marca: "Puma", modelo: "Caven", precio: 145000},
-    {marca: "Puma", modelo: "Cell Divide", precio: 137000},
-    {marca: "Puma", modelo: "X- Ray 2", precio: 119000 },]
 
-//const resultado4 = zapatillasNike.find((zapatilla) => 
 
-   //zapatilla.modelo === "Air Max")
+const zapatillas = [
 
-   //console.log(resultado4)
+   {marca: "Nike", modelo: "AirJodan", precio: 230000,},
+   {marca: "Nike", modelo: "Air Max", precio: 175000,},
+   { marca: "Nike", modelo: "Nike Air Zoom", precio: 165000},
+   {marca: "Adidas", modelo: "Adidas Campus", precio: 140000},
+   {marca: "Adidas", modelo: "Adidas Retro", precio: 165000},
+   {marca: "Adidas", modelo: "YEEZY", precio: 185000},
+   {marca: "Puma", modelo: "Caven", precio: 145000},
+   {marca: "Puma", modelo: "Cell Divide", precio: 137000},
+   {marca: "Puma", modelo: "X- Ray 2", precio: 119000 }
+
+ ]
 
 let eleccionMarca = prompt ("En esta pagina contamos con stock de varias marca. Nike, Adidas y Puma. Para verlas solo escriba el nombre de la marca que quiera mirar")
 
-const marcasNike = []
+
+const ComprarZapatillas = (Zapatilla) => {
+
+ const marcas = []
+
+ for(let i = 0; i < zapatillas.length; i++){
+
+   if(!marcas.includes(zapatillas[i].marca)){
+     marcas.push(zapatillas[i].marca)
+   }
+
+ }
 
 
+ if(marcas.includes(Zapatilla)){
 
-if(eleccionMarca == "Nike" || eleccionMarca == "nike"){
+   const filtrados = zapatillas.filter((element) => element.marca === eleccionMarca)
 
-zapatillasNike.forEach((tipos) => {
+   const modelos = []
 
-console.log(tipos.modelo)
+   for(let i = 0; filtrados.length > i; i++){
+     modelos.push(filtrados[i].modelo)
+   }
+   const modelosSinComas = modelos.join(" "); 
+   const seleccionDeZapa = prompt(`Tenemos en stock estos modelos ${modelosSinComas}`)
 
-marcasNike.push(tipos.modelo)
+   if(!modelos.includes(seleccionDeZapa)){
+     return console.log("Error modelo no encontrado")
+   }
 
+   const findZapa = zapatillas.find((element) => element.modelo === seleccionDeZapa)
 
-})
-let eleccionCompra = prompt ( "En la seccion de nike contamos con las " + marcasNike + "Cuales desearias llevar ?")
+   const precio = parseInt(findZapa.precio)
 
-
-
-
+   alert("Precio de la misma " + precio)
+ }else{
+   return console.log("Lo siento no se mostro una marca existente")
+ }
 }
 
-
+ComprarZapatillas(eleccionMarca)
 
 
 
