@@ -1,7 +1,7 @@
 
 
-
-let nombre = prompt ("Ingrese Su nombre");
+let salir = salir
+let nombre = prompt("Ingrese su nombre")
 
 if (nombre.length > 1){ {
 
@@ -102,6 +102,7 @@ alert ("Bienvenido " + nombre + " a la mejor tienda de zapatillas")
     elegirZapatillas ();
 
 } 
+
 
 
 
